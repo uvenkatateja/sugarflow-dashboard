@@ -1,5 +1,5 @@
 
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode, HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 import BlurContainer from './BlurContainer';
 
@@ -9,14 +9,15 @@ type FeatureCardProps = {
   icon: ReactNode;
   className?: string;
   style?: CSSProperties;
-};
+} & HTMLAttributes<HTMLDivElement>;
 
 const FeatureCard = ({ 
   title, 
   description, 
   icon,
   className,
-  style
+  style,
+  ...props
 }: FeatureCardProps) => {
   return (
     <BlurContainer 
@@ -25,6 +26,7 @@ const FeatureCard = ({
         className
       )}
       style={style}
+      {...props}
     >
       <div className="w-12 h-12 rounded-full bg-light-blue flex items-center justify-center text-blue-accent mb-4">
         {icon}

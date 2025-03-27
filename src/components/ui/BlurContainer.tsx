@@ -1,5 +1,5 @@
 
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode, HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 
 type BlurContainerProps = {
@@ -7,7 +7,7 @@ type BlurContainerProps = {
   className?: string;
   variant?: 'default' | 'light' | 'dark';
   style?: CSSProperties;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & HTMLAttributes<HTMLDivElement>;
 
 const BlurContainer = ({ 
   children, 
