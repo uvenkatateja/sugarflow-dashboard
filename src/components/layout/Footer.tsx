@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -11,9 +10,9 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <div className="flex items-center gap-2">
               <div className="h-8 w-8 rounded-full bg-blue-accent flex items-center justify-center">
-                <span className="text-white font-semibold text-sm">DM</span>
+                <span className="text-white font-semibold text-sm">DC</span>
               </div>
-              <span className="font-semibold text-dark-text">DiabetesManager</span>
+              <span className="font-semibold text-dark-text">Diabetes Care</span>
             </div>
             <p className="mt-2 text-sm text-light-text max-w-md">
               Empowering patients and healthcare providers with intuitive diabetes management tools.
@@ -50,7 +49,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-10 pt-5 border-t border-slate-100 text-center text-sm text-light-text">
-          <p>© {currentYear} DiabetesManager. All rights reserved.</p>
+          <p>© {currentYear} Diabetes Care. All rights reserved.</p>
         </div>
       </div>
     </footer>

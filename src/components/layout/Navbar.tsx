@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -51,13 +50,13 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="h-9 w-9 rounded-full bg-blue-accent flex items-center justify-center">
-            <span className="text-white font-semibold">DM</span>
+            <span className="text-white font-semibold">DC</span>
           </div>
           <span className={cn(
             "font-semibold text-lg transition-colors",
             isScrolled ? 'text-dark-text' : 'text-dark-text'
           )}>
-            DiabetesManager
+            Diabetes Care
           </span>
         </Link>
 

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -19,7 +18,7 @@ const Login = () => {
       navigate('/dashboard');
       
       // Show welcome toast
-      toast.success('Welcome to the Diabetes Manager demo!', {
+      toast.success('Welcome to the Diabetes Care demo!', {
         description: 'Explore the dashboard to view patient data and insights.',
       });
     }, 1500);
@@ -35,10 +34,10 @@ const Login = () => {
         <div className="mb-8 text-center">
           <div className="flex justify-center">
             <div className="h-12 w-12 rounded-full bg-blue-accent flex items-center justify-center">
-              <span className="text-white font-semibold">DM</span>
+              <span className="text-white font-semibold">DC</span>
             </div>
           </div>
-          <h1 className="mt-6 text-2xl font-bold text-dark-text">Welcome to DiabetesManager</h1>
+          <h1 className="mt-6 text-2xl font-bold text-dark-text">Welcome to Diabetes Care</h1>
           <p className="mt-2 text-medium-text">Sign in to access your dashboard</p>
         </div>
         

@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { 
   Activity, 
@@ -32,7 +31,7 @@ const Home = () => {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center bg-white/60 backdrop-blur-sm text-blue-accent px-3 py-1.5 rounded-full text-sm font-medium mb-6 animate-fade-down">
               <span className="bg-blue-accent/10 px-2 py-0.5 rounded-full mr-2">New</span>
-              Glucose Tracker v2.0
+              Diabetes Care v2.0
             </div>
             
             <h1 className="heading-xl text-dark-text mb-6 animate-fade-up">
@@ -40,7 +39,7 @@ const Home = () => {
             </h1>
             
             <p className="paragraph mb-8 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              Glucose Tracker makes blood sugar monitoring simple and insightful, helping you 
+              Diabetes Care makes blood sugar monitoring simple and insightful, helping you 
               maintain better control of your health with powerful analytics and personalized insights.
             </p>
             
@@ -179,7 +178,7 @@ const Home = () => {
                 Benefits
               </div>
               <h2 className="heading-lg text-dark-text mb-4">
-                Why Choose Glucose Tracker?
+                Why Choose Diabetes Care?
               </h2>
               <p className="paragraph mb-6">
                 Our platform offers unique advantages that make glucose management easier and more effective than ever before.
@@ -270,19 +269,19 @@ const Home = () => {
               What Our Users Say
             </h2>
             <p className="paragraph">
-              Discover how Glucose Tracker has helped people take control of their health.
+              Discover how Diabetes Care has helped people take control of their health.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
-                quote: "Glucose Tracker has completely changed how I manage my diabetes. The insights are invaluable.",
+                quote: "Diabetes Care has completely changed how I manage my diabetes. The insights are invaluable.",
                 name: "Sarah Johnson",
                 title: "Living with Type 1 Diabetes"
               },
               {
-                quote: "As a doctor, I recommend Glucose Tracker to all my patients. It makes our consultations so much more productive.",
+                quote: "As a doctor, I recommend Diabetes Care to all my patients. It makes our consultations so much more productive.",
                 name: "Dr. Michael Chen",
                 title: "Endocrinologist"
               },
