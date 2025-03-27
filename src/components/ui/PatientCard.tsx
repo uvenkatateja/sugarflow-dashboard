@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, CSSProperties } from 'react';
 import { ChevronRight, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BlurContainer from './BlurContainer';
@@ -11,12 +11,14 @@ type PatientCardProps = {
   patient: Patient;
   className?: string;
   compact?: boolean;
+  style?: CSSProperties;
 };
 
 const PatientCard = ({ 
   patient,
   className,
-  compact = false
+  compact = false,
+  style
 }: PatientCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const { id, name, age, gender, lastGlucoseLevel, lastGlucoseDate, avatarColor, glucoseStatus } = patient;
@@ -52,6 +54,7 @@ const PatientCard = ({
           'p-4 hover:shadow-card transition-all duration-300 cursor-pointer',
           className
         )}
+        style={style}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

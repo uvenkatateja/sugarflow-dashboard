@@ -1,5 +1,5 @@
 
-import { ReactNode } from 'react';
+import { ReactNode, CSSProperties } from 'react';
 import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import BlurContainer from './BlurContainer';
@@ -14,6 +14,7 @@ type StatisticCardProps = {
   };
   className?: string;
   subtitle?: string;
+  style?: CSSProperties;
 };
 
 const StatisticCard = ({ 
@@ -22,10 +23,14 @@ const StatisticCard = ({
   icon, 
   trend, 
   className,
-  subtitle 
+  subtitle,
+  style
 }: StatisticCardProps) => {
   return (
-    <BlurContainer className={cn("p-5 hover:shadow-card transition-all duration-300", className)}>
+    <BlurContainer 
+      className={cn("p-5 hover:shadow-card transition-all duration-300", className)}
+      style={style}
+    >
       <div className="flex justify-between items-start mb-3">
         <h3 className="text-sm font-medium text-medium-text">{title}</h3>
         {icon && <div className="text-blue-accent">{icon}</div>}

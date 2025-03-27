@@ -1,5 +1,5 @@
 
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import BlurContainer from './BlurContainer';
 
@@ -8,19 +8,24 @@ type FeatureCardProps = {
   description: string;
   icon: ReactNode;
   className?: string;
+  style?: CSSProperties;
 };
 
 const FeatureCard = ({ 
   title, 
   description, 
   icon,
-  className 
+  className,
+  style
 }: FeatureCardProps) => {
   return (
-    <BlurContainer className={cn(
-      'p-6 hover:shadow-card hover:scale-[1.02] transition-all duration-300',
-      className
-    )}>
+    <BlurContainer 
+      className={cn(
+        'p-6 hover:shadow-card hover:scale-[1.02] transition-all duration-300',
+        className
+      )}
+      style={style}
+    >
       <div className="w-12 h-12 rounded-full bg-light-blue flex items-center justify-center text-blue-accent mb-4">
         {icon}
       </div>

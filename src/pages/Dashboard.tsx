@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { 
   Activity, 
@@ -6,7 +5,7 @@ import {
   FileText, 
   LineChart, 
   PieChart, 
-  Pills,
+  Pill,
   Users, 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -69,7 +68,6 @@ const Dashboard = () => {
             value={stats.patientCount}
             icon={<Users size={20} />}
             className="animate-fade-up" 
-            style={{ animationDelay: '0.1s' }}
           />
           <StatisticCard
             title="Critical Alerts"
@@ -77,14 +75,12 @@ const Dashboard = () => {
             icon={<Activity size={20} />}
             trend={{ value: 1, direction: 'up' }}
             className="animate-fade-up"
-            style={{ animationDelay: '0.2s' }}
           />
           <StatisticCard
             title="Checkups Due"
             value={stats.checkupsDue}
             icon={<FileText size={20} />}
             className="animate-fade-up"
-            style={{ animationDelay: '0.3s' }}
           />
         </div>
         
@@ -133,7 +129,7 @@ const Dashboard = () => {
             </BlurContainer>
             
             {/* Health insights */}
-            <BlurContainer className="p-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+            <BlurContainer className="p-6 animate-fade-up">
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h2 className="text-lg font-semibold text-dark-text">Health Insights</h2>
@@ -154,7 +150,7 @@ const Dashboard = () => {
                   >
                     <div className="flex items-start mb-2">
                       <div className="mr-3">
-                        {insight.category === 'clinical' && <Pills size={20} className="text-blue-accent" />}
+                        {insight.category === 'clinical' && <Pill size={20} className="text-blue-accent" />}
                         {insight.category === 'lifestyle' && <Activity size={20} className="text-blue-accent" />}
                         {insight.category === 'nutrition' && <PieChart size={20} className="text-blue-accent" />}
                         {insight.category === 'general' && <Droplets size={20} className="text-blue-accent" />}
@@ -171,7 +167,7 @@ const Dashboard = () => {
           {/* Sidebar - 1/3 width */}
           <div className="space-y-8">
             {/* Patients list */}
-            <BlurContainer className="p-6 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <BlurContainer className="p-6 animate-fade-up">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold text-dark-text">Recent Patients</h2>
                 <Button variant="outline" size="sm" asChild>
@@ -193,7 +189,7 @@ const Dashboard = () => {
             </BlurContainer>
             
             {/* Upcoming appointments */}
-            <BlurContainer className="p-6 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            <BlurContainer className="p-6 animate-fade-up">
               <h2 className="text-lg font-semibold text-dark-text mb-4">Upcoming Checkups</h2>
               
               <div className="space-y-4">
@@ -219,7 +215,7 @@ const Dashboard = () => {
             </BlurContainer>
             
             {/* Summary card */}
-            <BlurContainer className="p-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+            <BlurContainer className="p-6 animate-fade-up">
               <h2 className="text-lg font-semibold text-dark-text mb-4">Glucose Breakdown</h2>
               
               <div className="bg-soft-gray p-4 rounded-lg mb-4">
