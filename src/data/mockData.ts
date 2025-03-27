@@ -109,14 +109,14 @@ const generateGlucoseReadings = (
 export const mockPatients: Patient[] = [
   {
     id: 1,
-    name: 'Sarah Johnson',
+    name: 'Priya Sharma',
     age: 42,
     gender: 'Female',
     lastGlucoseLevel: 192,
     lastGlucoseDate: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(), // 2 days ago
     avatarColor: avatarColors[0],
     glucoseStatus: 'high',
-    email: 'sarah.j@example.com',
+    email: 'priya.sharma@example.com',
     phone: '(555) 123-4567',
     diagnosis: 'Type 2 Diabetes',
     medication: ['Metformin 500mg', 'Glipizide 5mg'],
@@ -124,24 +124,24 @@ export const mockPatients: Patient[] = [
     a1c: 7.9,
     lastCheckup: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 days ago
     nextCheckup: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days from now
-    insuranceProvider: 'Blue Shield',
-    insuranceNumber: 'BS123456789',
+    insuranceProvider: 'Aditya Birla Health Insurance',
+    insuranceNumber: 'AB123456789',
     emergencyContact: {
-      name: 'Michael Johnson',
+      name: 'Vivek Sharma',
       relation: 'Spouse',
       phone: '(555) 234-5678',
     },
   },
   {
     id: 2,
-    name: 'Robert Chen',
+    name: 'Rajesh Patel',
     age: 65,
     gender: 'Male',
     lastGlucoseLevel: 145,
     lastGlucoseDate: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(), // 1 day ago
     avatarColor: avatarColors[1],
     glucoseStatus: 'normal',
-    email: 'robert.c@example.com',
+    email: 'rajesh.patel@example.com',
     phone: '(555) 987-6543',
     diagnosis: 'Type 2 Diabetes',
     medication: ['Insulin Glargine', 'Metformin 1000mg'],
@@ -152,14 +152,14 @@ export const mockPatients: Patient[] = [
   },
   {
     id: 3,
-    name: 'Emily Rodriguez',
+    name: 'Meera Iyer',
     age: 28,
     gender: 'Female',
     lastGlucoseLevel: 65,
     lastGlucoseDate: new Date(Date.now() - 4 * 60 * 60 * 1000).toISOString(), // 4 hours ago
     avatarColor: avatarColors[2],
     glucoseStatus: 'low',
-    email: 'emily.r@example.com',
+    email: 'meera.iyer@example.com',
     phone: '(555) 345-6789',
     diagnosis: 'Type 1 Diabetes',
     medication: ['Insulin Lispro', 'Insulin Glargine'],
@@ -168,21 +168,21 @@ export const mockPatients: Patient[] = [
     lastCheckup: new Date(Date.now() - 45 * 24 * 60 * 60 * 1000).toISOString(), // 45 days ago
     nextCheckup: new Date(Date.now() + 45 * 24 * 60 * 60 * 1000).toISOString(), // 45 days from now
     emergencyContact: {
-      name: 'Antonio Rodriguez',
+      name: 'Rajan Iyer',
       relation: 'Father',
       phone: '(555) 456-7890',
     },
   },
   {
     id: 4,
-    name: 'David Thompson',
+    name: 'Arjun Mehta',
     age: 52,
     gender: 'Male',
     lastGlucoseLevel: 130,
     lastGlucoseDate: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString(), // 12 hours ago
     avatarColor: avatarColors[3],
     glucoseStatus: 'normal',
-    email: 'david.t@example.com',
+    email: 'arjun.mehta@example.com',
     phone: '(555) 567-8901',
     diagnosis: 'Type 2 Diabetes',
     medication: ['Metformin 850mg'],
@@ -193,14 +193,14 @@ export const mockPatients: Patient[] = [
   },
   {
     id: 5,
-    name: 'Jennifer Wu',
+    name: 'Anjali Desai',
     age: 35,
     gender: 'Female',
     lastGlucoseLevel: 175,
     lastGlucoseDate: new Date(Date.now() - 8 * 60 * 60 * 1000).toISOString(), // 8 hours ago
     avatarColor: avatarColors[4],
     glucoseStatus: 'high',
-    email: 'jennifer.w@example.com',
+    email: 'anjali.desai@example.com',
     phone: '(555) 678-9012',
     diagnosis: 'Gestational Diabetes',
     medication: ['Insulin Glargine'],
@@ -211,14 +211,14 @@ export const mockPatients: Patient[] = [
   },
   {
     id: 6,
-    name: 'Michael Brown',
+    name: 'Sunil Verma',
     age: 71,
     gender: 'Male',
     lastGlucoseLevel: 155,
     lastGlucoseDate: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(), // 3 days ago
     avatarColor: avatarColors[5],
     glucoseStatus: 'normal',
-    email: 'michael.b@example.com',
+    email: 'sunil.verma@example.com',
     phone: '(555) 789-0123',
     diagnosis: 'Type 2 Diabetes',
     medication: ['Metformin 1000mg', 'Glimepiride 2mg'],
@@ -226,8 +226,8 @@ export const mockPatients: Patient[] = [
     a1c: 7.1,
     lastCheckup: new Date(Date.now() - 20 * 24 * 60 * 60 * 1000).toISOString(), // 20 days ago
     nextCheckup: new Date(Date.now() + 100 * 24 * 60 * 60 * 1000).toISOString(), // 100 days from now
-    insuranceProvider: 'Medicare',
-    insuranceNumber: 'MC987654321',
+    insuranceProvider: 'Star Health Insurance',
+    insuranceNumber: 'SH987654321',
   },
 ];
 
