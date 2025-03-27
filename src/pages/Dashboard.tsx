@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { 
   Activity, 
@@ -43,16 +44,8 @@ const Dashboard = () => {
   const selectedInsights = healthInsights.slice(0, 4);
   
   return (
-    <div className="min-h-screen pt-20 pb-10 bg-background">
+    <div className="min-h-screen pb-10 bg-background">
       <div className="container mx-auto px-4">
-        {/* Header section */}
-        <div className="mb-8 animate-fade-down">
-          <h1 className="text-2xl font-bold text-dark-text">Dashboard</h1>
-          <p className="text-medium-text">
-            Welcome back, Doctor. Here's your patient overview for today.
-          </p>
-        </div>
-        
         {/* Stats section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
           <StatisticCard

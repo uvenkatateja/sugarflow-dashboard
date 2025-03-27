@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -34,8 +35,9 @@ const Navbar = () => {
         { name: 'About', href: '/#about' },
       ];
 
-  // Only show navbar on non-login pages
-  if (isLoginPage) return null;
+  // Only show navbar on non-login pages and hide on dashboard pages 
+  // as we're using the sidebar for navigation there
+  if (isLoginPage || isDashboardSection) return null;
 
   return (
     <header 
@@ -75,21 +77,12 @@ const Navbar = () => {
             </Link>
           ))}
           
-          {isDashboardSection ? (
-            <Link
-              to="/"
-              className="ml-4 px-4 py-2 rounded-md text-medium-text hover:text-blue-accent transition-colors duration-200"
-            >
-              Logout
-            </Link>
-          ) : (
-            <Link
-              to="/login"
-              className="ml-4 px-5 py-2 bg-blue-accent hover:bg-blue-accent/90 text-white rounded-md transition-colors duration-200 shadow-sm"
-            >
-              Login
-            </Link>
-          )}
+          <Link
+            to="/login"
+            className="ml-4 px-5 py-2 bg-blue-accent hover:bg-blue-accent/90 text-white rounded-md transition-colors duration-200 shadow-sm"
+          >
+            Login
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -119,23 +112,13 @@ const Navbar = () => {
               </Link>
             ))}
             
-            {isDashboardSection ? (
-              <Link
-                to="/"
-                className="py-2 text-medium-text"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Logout
-              </Link>
-            ) : (
-              <Link
-                to="/login"
-                className="py-2 mt-2 bg-blue-accent hover:bg-blue-accent/90 text-white text-center rounded-md transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Login
-              </Link>
-            )}
+            <Link
+              to="/login"
+              className="py-2 mt-2 bg-blue-accent hover:bg-blue-accent/90 text-white text-center rounded-md transition-colors duration-200"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Login
+            </Link>
           </div>
         </div>
       )}

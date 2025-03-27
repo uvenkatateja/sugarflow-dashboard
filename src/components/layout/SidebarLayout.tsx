@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { 
   SidebarProvider, 
   Sidebar, 
@@ -18,9 +18,11 @@ import { Home, Activity, Users, FileText, LogOut, BarChart4 } from 'lucide-react
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import BlurContainer from '../ui/BlurContainer';
+import { toast } from '@/components/ui/use-toast';
 
 const SidebarLayout = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   // Handle window resize
@@ -38,12 +40,20 @@ const SidebarLayout = () => {
 
   if (!isDashboardRoute) return <Outlet />;
 
+  const handleLogout = () => {
+    toast({
+      title: "Logged out successfully",
+      description: "You have been logged out of your account"
+    });
+    navigate('/');
+  };
+
   return (
     <SidebarProvider defaultOpen={!isMobile}>
-      <div className="flex min-h-screen w-full">
-        <AppSidebar />
+      <div className="flex min-h-screen w-full bg-background pt-0">
+        <AppSidebar onLogout={handleLogout} />
         <main className="flex-1 overflow-x-hidden">
-          <div className="container mx-auto p-4">
+          <div className="container mx-auto p-4 pt-8">
             <div className="flex items-center mb-6">
               <SidebarTrigger className="mr-4 md:hidden" />
               <h1 className="text-2xl font-semibold text-dark-text">
@@ -60,7 +70,7 @@ const SidebarLayout = () => {
   );
 };
 
-const AppSidebar = () => {
+const AppSidebar = ({ onLogout }: { onLogout: () => void }) => {
   const location = useLocation();
 
   const menuItems = [
@@ -72,14 +82,14 @@ const AppSidebar = () => {
   return (
     <Sidebar>
       <SidebarHeader className="p-3">
-        <Link to="/" className="flex items-center gap-2 px-2">
+        <div className="flex items-center gap-2 px-2">
           <div className="h-9 w-9 rounded-full bg-blue-accent flex items-center justify-center">
-            <span className="text-white font-semibold">GT</span>
+            <span className="text-white font-semibold">DC</span>
           </div>
           <span className="font-semibold text-lg text-dark-text">
-            GlucoseTracker
+            Diabetes Care
           </span>
-        </Link>
+        </div>
       </SidebarHeader>
 
       <SidebarContent>
@@ -124,10 +134,13 @@ const AppSidebar = () => {
 
       <SidebarFooter className="p-3">
         <BlurContainer className="p-2">
-          <Link to="/" className="flex items-center gap-2 px-2 py-1 rounded-md hover:bg-blue-50 transition-colors">
+          <button 
+            onClick={onLogout}
+            className="flex w-full items-center gap-2 px-2 py-1 rounded-md hover:bg-blue-50 transition-colors"
+          >
             <LogOut size={18} className="text-medium-text" />
             <span className="text-medium-text">Logout</span>
-          </Link>
+          </button>
         </BlurContainer>
       </SidebarFooter>
     </Sidebar>
